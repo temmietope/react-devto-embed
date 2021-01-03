@@ -1,17 +1,27 @@
 import React from 'react'
 import styles from '../styles.module.css'
 import { formatDate } from '../utils'
-import { PostCard } from '../style'
+import { H3, P, PostCard } from '../style'
 
-const Post = ({ post, itemsPerRow, margin }) => {
+const Post = ({
+  post,
+  itemsPerRow,
+  margin,
+  headerSize,
+  headerColor,
+  excerptSize,
+  excerptColor
+}) => {
   return (
     <PostCard itemsPerRow={itemsPerRow} margin={margin}>
-      <h3>
+      <H3 headerSize={headerSize} headerColor={headerColor}>
         <a href={post.canonical_url} target='_blank' rel='noopener noreferrer'>
           {post.title}
         </a>
-      </h3>
-      <p>{post.description}</p>
+      </H3>
+      <P excerptSize={excerptSize} excerptColor={excerptColor}>
+        {post.description}
+      </P>
       <div className={styles.author}>
         by: <span>{post.user.name}</span> on
         <span>{formatDate(post.created_at)}</span>

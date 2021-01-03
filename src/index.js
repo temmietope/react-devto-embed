@@ -3,7 +3,15 @@ import PropTypes from 'prop-types'
 import Post from './components/Post'
 import { PostsContainer, PostsWrapper } from './style'
 
-const ReactDevTo = ({ username, itemsPerRow, margin }) => {
+const ReactDevTo = ({
+  username,
+  itemsPerRow,
+  margin,
+  headerSize,
+  headerColor,
+  excerptSize,
+  excerptColor
+}) => {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -31,6 +39,10 @@ const ReactDevTo = ({ username, itemsPerRow, margin }) => {
                 key={post.id}
                 itemsPerRow={itemsPerRow}
                 margin={margin}
+                headerSize={headerSize}
+                headerColor={headerColor}
+                excerptSize={excerptSize}
+                excerptColor={excerptColor}
               />
             )
           })}
