@@ -6,11 +6,14 @@ import { PostsContainer, PostsWrapper } from './style'
 const ReactDevTo = ({
   username,
   itemsPerRow,
+  postHeight,
   margin,
   headerSize,
   headerColor,
   excerptSize,
-  excerptColor
+  excerptColor,
+  buttonBgColor,
+  buttonFontColor
 }) => {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -38,11 +41,14 @@ const ReactDevTo = ({
                 post={post}
                 key={post.id}
                 itemsPerRow={itemsPerRow}
+                postHeight={postHeight}
                 margin={margin}
                 headerSize={headerSize}
                 headerColor={headerColor}
                 excerptSize={excerptSize}
                 excerptColor={excerptColor}
+                buttonBgColor={buttonBgColor}
+                buttonFontColor={buttonFontColor}
               />
             )
           })}

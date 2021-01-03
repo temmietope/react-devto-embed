@@ -16,14 +16,12 @@ export const PostsContainer = styled.div`
 `
 
 export const PostCard = styled.div`
-  height: 15rem;
-  max-height: 15rem;
+  height: ${(props) => (props.postHeight ? props.postHeight : '15rem')};
   border-radius: 10px;
   padding: 0.8rem 1rem;
   box-sizing: border-box;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 35% 10% 40% 15%;
   margin-bottom: 1rem;
   width: 100%;
   margin: ${(props) => (props.margin ? `${props.margin} 0` : '1% 0')};
@@ -63,4 +61,29 @@ export const H3 = styled.h3`
 export const P = styled.p`
   font-size: ${(props) => (props.excerptSize ? props.excerptSize : '1.05rem')};
   color: ${(props) => (props.excerptColor ? props.excerptColor : '#333')};
+  margin: 3% 0;
+`
+
+export const PostDate = styled.div`
+  text-align: right;
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+`
+
+export const Button = styled.button`
+  cursor: pointer;
+  padding: 2% 5%;
+  background: ${(props) =>
+    props.buttonBgColor
+      ? props.buttonBgColor
+      : 'linear-gradient(225deg, rgb(38, 60, 139) 0%, rgb(6, 14, 76) 100%);'};
+  color: ${(props) => (props.buttonFontColor ? props.buttonFontColor : '#fff')};
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  a {
+    width: 100%;
+  }
 `

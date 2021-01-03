@@ -9,11 +9,14 @@ const App = () => {
     <ReactDevTo
       username={username}
       itemsPerRow={2}
+      postHeight='15rem'
       margin='1%'
-      headerSize='1.5rem'
+      headerSize='2rem'
       headerColor='#333'
       excerptSize='1.05rem'
       excerptColor='#333'
+      buttonBgColor='linear-gradient(225deg, rgb(38, 60, 139) 0%, rgb(6, 14, 76) 100%)'
+      buttonFontColor='white'
     />
   )
 }
