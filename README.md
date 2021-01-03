@@ -13,15 +13,14 @@ npm install --save react-devto-embed
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'react-devto-embed'
+import ReactDevTo from 'react-devto-embed'
 import 'react-devto-embed/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  const username = 'temmietope'
+  return <ReactDevTo username={username} />
 }
 ```
 
