@@ -1,7 +1,7 @@
 {
   "name": "react-devto-embed",
-  "version": "1.0.1",
-  "description": "react dev-dot-to embed for any project",
+  "version": "1.0.1.1",
+  "description": "Embed your dev.to articles in any project",
   "author": "temmietope",
   "license": "MIT",
   "repository": "temmietope/react-devto-embed",

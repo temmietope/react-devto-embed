@@ -14,7 +14,8 @@ const ReactDevTo = ({
   excerptSize,
   excerptColor,
   buttonBgColor,
-  buttonFontColor
+  buttonFontColor,
+  buttonText
 }) => {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -50,6 +51,7 @@ const ReactDevTo = ({
                 excerptColor={excerptColor}
                 buttonBgColor={buttonBgColor}
                 buttonFontColor={buttonFontColor}
+                buttonText={buttonText}
               />
             )
           })}

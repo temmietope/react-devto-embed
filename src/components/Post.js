@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from '../styles.module.css'
 import { formatDate } from '../utils'
 import { Button, H3, P, PostCard, PostDate } from '../style'
 
@@ -14,7 +13,8 @@ const Post = ({
   excerptSize,
   excerptColor,
   buttonBgColor,
-  buttonFontColor
+  buttonFontColor,
+  buttonText
 }) => {
   return (
     <PostCard itemsPerRow={itemsPerRow} margin={margin} postHeight={postHeight}>
@@ -33,30 +33,9 @@ const Post = ({
       <P excerptSize={excerptSize} excerptColor={excerptColor}>
         {post.description}
       </P>
-      {/* <div className={styles.author}>
-        by: <span>{post.user.name}</span> on
-        <span>{formatDate(post.created_at)}</span>
-      </div> */}
-      {/* <div className={styles.postButton}>
-        <button>
-          <a
-            href={post.canonical_url}
-            target='_blank'
-            rel='noopener noreferrer'
-            className={styles.readmore}
-          >
-            Read post
-          </a>
-        </button>
-      </div> */}
-      <a
-        href={post.canonical_url}
-        target='_blank'
-        rel='noopener noreferrer'
-        // className={styles.readmore}
-      >
+      <a href={post.canonical_url} target='_blank' rel='noopener noreferrer'>
         <Button buttonBgColor={buttonBgColor} buttonFontColor={buttonFontColor}>
-          Read post
+          {buttonText}
         </Button>
       </a>
     </PostCard>
