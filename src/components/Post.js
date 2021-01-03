@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from '../styles.module.css'
 import { formatDate } from '../utils'
+import { PostCard } from '../style'
 
-const Post = ({ post }) => {
+const Post = ({ post, itemsPerRow, margin }) => {
   return (
-    <div className={styles.post}>
+    <PostCard itemsPerRow={itemsPerRow} margin={margin}>
       <h3>
         <a href={post.canonical_url} target='_blank' rel='noopener noreferrer'>
           {post.title}
@@ -27,7 +28,7 @@ const Post = ({ post }) => {
           </a>
         </button>
       </div>
-    </div>
+    </PostCard>
   )
 }
 

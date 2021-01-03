@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import styles from './styles.module.css'
-// import './styles.css'
 import Post from './components/Post'
+import { PostsContainer, PostsWrapper } from './style'
 
-const ReactDevTo = ({ username }) => {
+const ReactDevTo = ({ username, itemsPerRow, margin }) => {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -20,19 +19,26 @@ const ReactDevTo = ({ username }) => {
       })
   }, [])
   return (
-    <div>
+    <PostsWrapper>
       {loading ? (
         <div className='loading'>Loading</div>
       ) : !loading && posts && posts.length > 0 ? (
-        <div className={styles.postsWrapper}>
+        <PostsContainer>
           {posts.map((post) => {
-            return <Post post={post} key={post.id} />
+            return (
+              <Post
+                post={post}
+                key={post.id}
+                itemsPerRow={itemsPerRow}
+                margin={margin}
+              />
+            )
           })}
-        </div>
+        </PostsContainer>
       ) : (
         <div className='error__page'> Nothing to display :) </div>
       )}
-    </div>
+    </PostsWrapper>
   )
 }
 
