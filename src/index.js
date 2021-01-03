@@ -10,6 +10,7 @@ const ReactDevTo = ({
   margin,
   headerSize,
   headerColor,
+  headerTextTransform,
   excerptSize,
   excerptColor,
   buttonBgColor,
@@ -23,7 +24,6 @@ const ReactDevTo = ({
       .then((res) => {
         setLoading(false)
         setPosts(res)
-        console.log(res)
       })
       .catch(() => {
         setLoading(false)
@@ -45,6 +45,7 @@ const ReactDevTo = ({
                 margin={margin}
                 headerSize={headerSize}
                 headerColor={headerColor}
+                headerTextTransform={headerTextTransform}
                 excerptSize={excerptSize}
                 excerptColor={excerptColor}
                 buttonBgColor={buttonBgColor}

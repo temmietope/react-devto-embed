@@ -10,6 +10,7 @@ const Post = ({
   postHeight,
   headerSize,
   headerColor,
+  headerTextTransform,
   excerptSize,
   excerptColor,
   buttonBgColor,
@@ -17,7 +18,11 @@ const Post = ({
 }) => {
   return (
     <PostCard itemsPerRow={itemsPerRow} margin={margin} postHeight={postHeight}>
-      <H3 headerSize={headerSize} headerColor={headerColor}>
+      <H3
+        headerSize={headerSize}
+        headerColor={headerColor}
+        headerTextTransform={headerTextTransform}
+      >
         <a href={post.canonical_url} target='_blank' rel='noopener noreferrer'>
           {post.title}
         </a>

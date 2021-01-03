@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const PostsWrapper = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +9,7 @@ export const PostsWrapper = styled.div`
 `
 
 export const PostsContainer = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +19,7 @@ export const PostsContainer = styled.div`
 export const PostCard = styled.div`
   height: ${(props) => (props.postHeight ? props.postHeight : '15rem')};
   border-radius: 10px;
-  padding: 0.8rem 1rem;
+  padding: 1.5% 2%;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 35% 10% 40% 15%;
@@ -46,6 +47,8 @@ export const PostCard = styled.div`
 
 export const H3 = styled.h3`
   font-size: ${(props) => (props.headerSize ? props.headerSize : '1.5rem')};
+  line-height: 110%;
+  text-transform: ${(props) => (props.headerTextTransform ? props.headerTextTransform : 'capitalize')};
   margin: 0;
   padding: 0;
   display: -webkit-box;

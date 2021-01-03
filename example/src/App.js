@@ -13,6 +13,7 @@ const App = () => {
       margin='1%'
       headerSize='2rem'
       headerColor='#333'
+      headerTextTransform='uppercase'
       excerptSize='1.05rem'
       excerptColor='#333'
       buttonBgColor='linear-gradient(225deg, rgb(38, 60, 139) 0%, rgb(6, 14, 76) 100%)'
