@@ -1,6 +1,6 @@
 {
   "name": "react-devto-embed",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Embed your dev.to articles in any project",
   "author": "temmietope",
   "license": "MIT",
@@ -49,5 +49,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "styled-components": "^5.2.1"
+  }
 }
