@@ -15,7 +15,9 @@ const ReactDevTo = ({
   excerptColor,
   buttonBgColor,
   buttonFontColor,
-  buttonText
+  buttonText,
+  errorMessage,
+  loadingMessage
 }) => {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -33,7 +35,7 @@ const ReactDevTo = ({
   return (
     <PostsWrapper>
       {loading ? (
-        <div className='loading'>Loading</div>
+        <div className='loading'>{loadingMessage}</div>
       ) : !loading && posts && posts.length > 0 ? (
         <PostsContainer>
           {posts.map((post) => {
@@ -57,7 +59,7 @@ const ReactDevTo = ({
           })}
         </PostsContainer>
       ) : (
-        <div className='error__page'> Nothing to display :) </div>
+        <div className='error__page'> {errorMessage} </div>
       )}
     </PostsWrapper>
   )

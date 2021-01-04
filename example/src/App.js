@@ -18,6 +18,8 @@ const App = () => {
       buttonBgColor='linear-gradient(225deg, rgb(38, 60, 139) 0%, rgb(6, 14, 76) 100%)'
       buttonFontColor='#f2f2f2'
       buttonText='Read Post'
+      loadingMessage='Loading'
+      errorMessage='Nothing to display :)'
     />
   )
 }

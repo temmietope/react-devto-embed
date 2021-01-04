@@ -26,7 +26,7 @@ const App = () => {
 ### Props
 
 | Props                   | Description                  | Type   | Default value                                                       | options                                                                                           |
-| ----------------------- | ---------------------------- | ------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| ----------------------- | ---------------------------- | ------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --- | ------------------- | -------------------------------- | ------ | --------- | -------------------- |
 | **username**            | dev.to username              | String | -                                                                   | username on dev.to                                                                                |
 | **itemsPerRow**         | Number of posts on a row     | Number | 2                                                                   | 1,2,3,4                                                                                           |
 | **postHeight**          | Height of individual post    | String | '15rem'                                                             | Desired height in _px_, _rem_, _vh_ etc                                                           |
@@ -35,12 +35,14 @@ const App = () => {
 | **headerColor**         | Color of post header(h3)     | String | '#333'                                                              | Desired color in _rgba_, _hex_, etc.                                                              |
 | **headerTextTransform** | Text transform of Header     | String | 'capitalize'                                                        | 'capitalize', 'uppercase', 'lowercase'                                                            |
 | **exceptSize**          | Font size of post excerpt(p) | String | '1.05rem'                                                           | Desired font-size in _px_, _rem_, etc. Note that at screen size of below 768px, this is neglected |
-| **excerptColor**        | Color of post excerpt(p)    | String | '#333'                                                              | Desired color in _rgba_, _hex_, etc.                                                              |
+| **excerptColor**        | Color of post excerpt(p)     | String | '#333'                                                              | Desired color in _rgba_, _hex_, etc.                                                              |
 | **buttonBgColor**       | Color of post button(button) | String | 'linear-gradient(225deg, rgb(38, 60, 139) 0%, rgb(6, 14, 76) 100%)' | Desired color in _rgba_, _hex_, etc.                                                              |
 | **buttonFontColor**     | Color of post button(button) | String | '#f2f2f2'                                                           | Desired color in _rgba_, _hex_, etc.                                                              |
 | **buttonText**          | Text on post button          | String | 'Read Post'                                                         | Desired text on button                                                                            |
+| **errorMessage**        | Message to display on error  | String | 'Nothing to display :)'                                             | Desired error message                                                                             |     | **loading Message** | Message to display while loading | String | 'Loading' | Desired loading text |
 
 ### Example Usage with various props
+
 ```jsx
 import React from 'react'
 
@@ -62,11 +64,12 @@ const App = () => {
       buttonBgColor='linear-gradient(225deg, rgb(38, 60, 139) 0%, rgb(6, 14, 76) 100%)'
       buttonFontColor='#f2f2f2'
       buttonText='Read Post'
+      loadingMessage='Loading'
+      errorMessage='Nothing to display :)'
     />
   )
 }
 ```
-
 
 ## License
 
