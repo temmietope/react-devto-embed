@@ -14,7 +14,6 @@ npm install --save react-devto-embed
 
 ```jsx
 import React from 'react'
-
 import ReactDevTo from 'react-devto-embed'
 
 const App = () => {
@@ -46,7 +45,6 @@ const App = () => {
 
 ```jsx
 import React from 'react'
-
 import ReactDevTo from 'react-devto-embed'
 
 const App = () => {
