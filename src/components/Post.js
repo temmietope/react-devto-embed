@@ -17,7 +17,6 @@ const Post = ({
   buttonFontColor,
   buttonText
 }) => {
-  const mediumScreen = useMediaQuery('(max-width: 950px)')
   const smallScreen = useMediaQuery('(max-width: 768px)')
   const smallerScreen = useMediaQuery('(max-width: 500px)')
 
@@ -47,9 +46,7 @@ const Post = ({
 
     postHeader: {
       fontSize: headerSize
-        ? mediumScreen
-          ? '1.2rem'
-          : smallScreen
+        ? smallScreen
           ? '1.25rem'
           : smallerScreen
           ? '1.05rem'
@@ -63,7 +60,8 @@ const Post = ({
       padding: '0',
       display: '-webkit-box',
       WebkitBoxOrient: 'vertical',
-      WebkitLineClamp: '2'
+      WebkitLineClamp: '2',
+      overflow: 'hidden'
     },
 
     postExcerpt: {
