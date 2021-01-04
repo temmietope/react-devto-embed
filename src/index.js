@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Post from './components/Post'
-import { useMediaQuery } from './utils/useMediaQuery'
+import { PostsContainer, PostsWrapper } from './style'
 
 const ReactDevTo = ({
   username,
@@ -19,7 +19,6 @@ const ReactDevTo = ({
   errorMessage,
   loadingMessage
 }) => {
-  const smallScreen = useMediaQuery('(max-width: 768px)')
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -33,31 +32,12 @@ const ReactDevTo = ({
         setLoading(false)
       })
   }, [])
-  const styles = {
-    postWrapper: {
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexWrap: 'wrap'
-    },
-    postContainer: {
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      flexWrap: 'wrap',
-      flexDirection: smallScreen ? 'column' : 'row',
-      flexWrap: smallScreen ? 'no-wrap' : 'wrap'
-    }
-  }
-
   return (
-    <div style={styles.postWrapper}>
+    <PostsWrapper>
       {loading ? (
         <div className='loading'>{loadingMessage}</div>
       ) : !loading && posts && posts.length > 0 ? (
-        <div className='container' style={styles.postContainer}>
+        <PostsContainer>
           {posts.map((post) => {
             return (
               <Post
@@ -77,29 +57,16 @@ const ReactDevTo = ({
               />
             )
           })}
-        </div>
+        </PostsContainer>
       ) : (
         <div className='error__page'> {errorMessage} </div>
       )}
-    </div>
+    </PostsWrapper>
   )
 }
 
 ReactDevTo.propTypes = {
-  username: PropTypes.string,
-  itemsPerRow: PropTypes.number,
-  postHeight: PropTypes.string,
-  margin: PropTypes.string,
-  headerSize: PropTypes.string,
-  headerColor: PropTypes.string,
-  headerTextTransform: PropTypes.string,
-  excerptSize: PropTypes.string,
-  excerptColor: PropTypes.string,
-  buttonBgColor: PropTypes.string,
-  buttonFontColor: PropTypes.string,
-  buttonText: PropTypes.string,
-  errorMessage: PropTypes.string,
-  loadingMessage: PropTypes.string
+  username: PropTypes.string
 }
 
 export default ReactDevTo
