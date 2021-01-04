@@ -26,7 +26,7 @@ const App = () => {
 ### Props
 
 | Props                   | Description                  | Type   | Default value                                                       | options                                                                                           |
-| ----------------------- | ---------------------------- | ------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --- | ------------------- | -------------------------------- | ------ | --------- | -------------------- |
+| ----------------------- | ---------------------------- | ------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | **username**            | dev.to username              | String | -                                                                   | username on dev.to                                                                                |
 | **itemsPerRow**         | Number of posts on a row     | Number | 2                                                                   | 1,2,3,4                                                                                           |
 | **postHeight**          | Height of individual post    | String | '15rem'                                                             | Desired height in _px_, _rem_, _vh_ etc                                                           |
@@ -39,7 +39,8 @@ const App = () => {
 | **buttonBgColor**       | Color of post button(button) | String | 'linear-gradient(225deg, rgb(38, 60, 139) 0%, rgb(6, 14, 76) 100%)' | Desired color in _rgba_, _hex_, etc.                                                              |
 | **buttonFontColor**     | Color of post button(button) | String | '#f2f2f2'                                                           | Desired color in _rgba_, _hex_, etc.                                                              |
 | **buttonText**          | Text on post button          | String | 'Read Post'                                                         | Desired text on button                                                                            |
-| **errorMessage**        | Message to display on error  | String | 'Nothing to display :)'                                             | Desired error message                                                                             |     | **loading Message** | Message to display while loading | String | 'Loading' | Desired loading text |
+| **loadingMessage**      | Loading message              | String | 'Loading'                                                           | Desired loading message                                                                           |
+| **errorMessage**        | Error message                | String | 'Nothing to display'                                                | Desired error message                                                                             |
 
 ### Example Usage with various props
 
